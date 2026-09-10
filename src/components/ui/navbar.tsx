@@ -19,9 +19,29 @@ export function Navbar({ className }: NavbarProps) {
   const navLinks = [
     { name: "Services", href: "/#services" },
     { name: "Products", href: "/#products" },
-    { name: "Our Work", href: "/#testimonials" },
     { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ];
+
+  const isLinkActive = (href: string) => {
+    if (href === "/about") return pathname?.startsWith("/about");
+    if (href === "/contact") return pathname?.startsWith("/contact");
+    return pathname === href;
+  };
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith("/#")) {
+      const targetId = href.replace("/#", "");
+      if (pathname === "/") {
+        e.preventDefault();
+        const elem = document.getElementById(targetId);
+        if (elem) {
+          elem.scrollIntoView({ behavior: "smooth", block: "start" });
+          window.history.pushState(null, "", href);
+        }
+      }
+    }
+  };
 
   return (
     <header className={cn("w-full max-w-5xl mx-auto z-50", className)}>
@@ -35,12 +55,13 @@ export function Navbar({ className }: NavbarProps) {
         {/* Desktop Navigation Links */}
         <div className="hidden md:flex items-center space-x-1">
           {navLinks.map((item) => {
-            const isActive = pathname === item.href || (item.href === "/about" && pathname?.startsWith("/about"));
+            const isActive = isLinkActive(item.href);
 
             return (
               <Link
                 key={item.name}
                 href={item.href}
+                onClick={(e) => handleNavClick(e, item.href)}
                 className={cn(
                   "group relative px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ease-out active:scale-95",
                   isActive
@@ -81,13 +102,16 @@ export function Navbar({ className }: NavbarProps) {
           <div className="md:hidden absolute top-full mt-2.5 left-0 right-0 p-4 rounded-2xl bg-white/95 backdrop-blur-2xl backdrop-saturate-150 border border-white/80 shadow-[inset_0_1px_1px_0_rgba(255,255,255,0.9),0_16px_36px_-6px_rgba(15,23,42,0.12)] flex flex-col space-y-3 animate-in fade-in slide-in-from-top-2 duration-200 z-50">
             <div className="flex flex-col space-y-1">
               {navLinks.map((item) => {
-                const isActive = pathname === item.href || (item.href === "/about" && pathname?.startsWith("/about"));
+                const isActive = isLinkActive(item.href);
 
                 return (
                   <Link
                     key={item.name}
                     href={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={(e) => {
+                      setMobileMenuOpen(false);
+                      handleNavClick(e, item.href);
+                    }}
                     className={cn(
                       "text-xs font-medium px-3.5 py-2.5 rounded-xl transition-colors",
                       isActive

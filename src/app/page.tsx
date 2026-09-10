@@ -15,9 +15,24 @@ import { Footer } from "@/components/sections/footer";
 import { Navbar } from "@/components/ui/navbar";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { useEffect } from "react";
 import { CALENDLY_URL } from "@/lib/constants";
 
 export default function Home() {
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const hash = window.location.hash;
+    if (hash) {
+      const id = hash.replace("#", "");
+      const elem = document.getElementById(id);
+      if (elem) {
+        setTimeout(() => {
+          elem.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 120);
+      }
+    }
+  }, []);
+
   return (
     <div className="relative min-h-screen w-full text-slate-900 bg-[#f8fafc] font-sans font-light selection:bg-blue-500/30 overflow-x-clip">
       {/* Hero Viewport Section */}
