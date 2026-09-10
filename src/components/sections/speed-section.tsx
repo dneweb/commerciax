@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { CALENDLY_URL } from "@/lib/constants";
 
 const TRADITIONAL_STEPS = ["Discovery", "Planning", "Development", "QA", "Launch"];
 const COMMERCIAX_STEPS = ["Discovery", "Build", "Test"];
@@ -55,7 +56,9 @@ export function SpeedSection() {
                 </Link>
 
                 <Link
-                  href="#contact"
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group inline-flex items-center gap-2 text-sm font-sans font-medium text-slate-800 hover:text-blue-600 transition-colors py-2"
                 >
                   <span>Talk to our team</span>

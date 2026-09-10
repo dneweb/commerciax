@@ -15,6 +15,7 @@ import { Footer } from "@/components/sections/footer";
 import { ArrowRight, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { CALENDLY_URL } from "@/lib/constants";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -58,10 +59,15 @@ export default function Home() {
 
               {/* Right Action & Mobile Toggle */}
               <div className="flex items-center space-x-3">
-                <button className="group relative hidden md:inline-flex items-center gap-2 bg-slate-950 hover:bg-slate-800 active:bg-black text-white px-5 py-2.5 rounded-full text-xs font-medium tracking-wide shadow-[inset_0_1px_0_0_rgba(255,255,255,0.25),0_4px_12px_-2px_rgba(15,23,42,0.25)] hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.35),0_6px_18px_-2px_rgba(15,23,42,0.35)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 cursor-pointer">
+                <Link
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative hidden md:inline-flex items-center gap-2 bg-slate-950 hover:bg-slate-800 active:bg-black text-white px-5 py-2.5 rounded-full text-xs font-medium tracking-wide shadow-[inset_0_1px_0_0_rgba(255,255,255,0.25),0_4px_12px_-2px_rgba(15,23,42,0.25)] hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.35),0_6px_18px_-2px_rgba(15,23,42,0.35)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 cursor-pointer"
+                >
                   <span>Let&apos;s Talk</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 ease-out group-hover:translate-x-0.5" />
-                </button>
+                </Link>
 
                 <button
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -94,10 +100,16 @@ export default function Home() {
                     ))}
                   </div>
                   <div className="pt-2 border-t border-slate-200/60">
-                    <button className="w-full flex items-center justify-center gap-2 bg-slate-950 hover:bg-slate-800 active:bg-black text-white py-2.5 rounded-full text-xs font-medium shadow-md transition-colors cursor-pointer">
+                    <Link
+                      href={CALENDLY_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="w-full flex items-center justify-center gap-2 bg-slate-950 hover:bg-slate-800 active:bg-black text-white py-2.5 rounded-full text-xs font-medium shadow-md transition-colors cursor-pointer"
+                    >
                       <span>Let&apos;s Talk</span>
                       <ArrowRight className="w-3.5 h-3.5" />
-                    </button>
+                    </Link>
                   </div>
                 </div>
               )}
@@ -119,10 +131,15 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-4 w-full sm:w-auto">
-              <button className="group relative inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white font-sans text-sm sm:text-[15px] font-medium tracking-wide shadow-[inset_0_1px_0_0_rgba(255,255,255,0.25),0_4px_20px_-2px_rgba(37,99,235,0.4)] hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.35),0_8px_25px_-2px_rgba(37,99,235,0.5)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 cursor-pointer">
+              <Link
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white font-sans text-sm sm:text-[15px] font-medium tracking-wide shadow-[inset_0_1px_0_0_rgba(255,255,255,0.25),0_4px_20px_-2px_rgba(37,99,235,0.4)] hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.35),0_8px_25px_-2px_rgba(37,99,235,0.5)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 cursor-pointer"
+              >
                 <span>Start a project</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-200 ease-out group-hover:translate-x-1" />
-              </button>
+              </Link>
               <button className="group relative inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-white/80 hover:bg-white active:bg-slate-50 text-slate-800 hover:text-slate-950 font-sans text-sm sm:text-[15px] font-medium tracking-wide border border-slate-200/90 hover:border-slate-300 backdrop-blur-md shadow-[inset_0_1px_0_0_rgba(255,255,255,0.8),0_2px_8px_-2px_rgba(15,23,42,0.06)] hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.9),0_6px_20px_-4px_rgba(15,23,42,0.12)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 cursor-pointer">
                 <span>See how we work</span>
                 <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-slate-900 transition-all duration-200 ease-out group-hover:translate-x-1" />

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { CALENDLY_URL } from "@/lib/constants";
 
 interface MetricItem {
   id: string;
@@ -111,7 +112,9 @@ export function NumbersSection() {
 
           {/* Right Action */}
           <Link
-            href="#contact"
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-slate-950 hover:bg-slate-800 text-white font-sans text-sm sm:text-[15px] font-medium tracking-wide transition-all shadow-[0_4px_16px_-2px_rgba(15,23,42,0.2)] hover:shadow-[0_6px_22px_-2px_rgba(15,23,42,0.3)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] shrink-0"
           >
             <span>Let&apos;s Talk</span>

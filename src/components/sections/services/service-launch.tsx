@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { CALENDLY_URL } from "@/lib/constants";
 
 interface StepItem {
   num: string;
@@ -87,10 +88,12 @@ export function ServiceLaunch() {
 
             <div className="flex flex-wrap items-center gap-3 sm:gap-5">
               <Link
-                href="#contact"
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-2 sm:gap-2.5 px-6 sm:px-8 py-3 sm:py-3.5 md:py-4 rounded-full bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white font-sans text-xs sm:text-sm md:text-[15px] font-medium tracking-wide transition-all shadow-[inset_0_1px_0_0_rgba(255,255,255,0.25),0_4px_20px_-2px_rgba(37,99,235,0.4)] hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.35),0_8px_25px_-2px_rgba(37,99,235,0.5)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] shrink-0"
               >
-                <span>Turn your idea into a product</span>
+                <span>Turn idea into production</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-200 ease-out group-hover:translate-x-1" />
               </Link>
 

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { CALENDLY_URL } from "@/lib/constants";
 import {
   FileText,
   Database,
@@ -98,7 +99,9 @@ export function ServiceBuild() {
 
             <div className="flex flex-wrap items-center gap-3 sm:gap-5">
               <Link
-                href="#contact"
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-2 sm:gap-2.5 px-6 sm:px-8 py-3 sm:py-3.5 md:py-4 rounded-full bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white font-sans text-xs sm:text-sm md:text-[15px] font-medium tracking-wide transition-all shadow-[0_4px_20px_-2px_rgba(37,99,235,0.4)] hover:shadow-[0_8px_25px_-2px_rgba(37,99,235,0.5)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
               >
                 <span>Discuss your use case</span>

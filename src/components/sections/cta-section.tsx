@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { SonarGrid } from "@/components/ui/sonar-grid";
+import { CALENDLY_URL } from "@/lib/constants";
 
 export function CTASection() {
   return (
@@ -49,7 +50,9 @@ export function CTASection() {
 
             {/* CTA Button */}
             <Link
-              href="#contact"
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white font-sans text-sm sm:text-[15px] font-medium tracking-wide transition-all shadow-[0_4px_20px_-2px_rgba(37,99,235,0.4)] hover:shadow-[0_8px_25px_-2px_rgba(37,99,235,0.5)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] cursor-pointer"
             >
               <span>Start a Conversation</span>
