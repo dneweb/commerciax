@@ -83,35 +83,20 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Col 3: Company & Trust (2 cols on desktop) */}
+          {/* Col 3: Company (2 cols on desktop) */}
           <div className="lg:col-span-2">
             <h3 className="text-xs uppercase tracking-[0.2em] text-slate-400 font-semibold font-mono mb-4 sm:mb-5">
               Company
             </h3>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="#problem" className="text-slate-400 hover:text-white transition-colors">
-                  The Problem
+                <Link href="/about" className="text-slate-400 hover:text-white transition-colors">
+                  About
                 </Link>
               </li>
               <li>
-                <Link href="#speed" className="text-slate-400 hover:text-white transition-colors">
-                  Production Speed
-                </Link>
-              </li>
-              <li>
-                <Link href="#numbers" className="text-slate-400 hover:text-white transition-colors">
-                  By The Numbers
-                </Link>
-              </li>
-              <li>
-                <Link href="#testimonials" className="text-slate-400 hover:text-white transition-colors">
-                  Client Stories
-                </Link>
-              </li>
-              <li>
-                <Link href="#backed-by" className="text-slate-400 hover:text-white transition-colors">
-                  Recognized By
+                <Link href="/contact" className="text-slate-400 hover:text-white transition-colors">
+                  Contact
                 </Link>
               </li>
             </ul>
