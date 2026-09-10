@@ -5,6 +5,13 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "CommerciaX — AI × Product × Growth",
   description: "We turn ambitious ideas into things that ship.",
+  icons: {
+    icon: [
+      { url: "/icon.png", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
