@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import {
   BarChart3,
   Database,
@@ -402,13 +403,18 @@ export function ProblemSection() {
                 <div
                   onMouseEnter={() => setHubHovered(true)}
                   onMouseLeave={() => setHubHovered(false)}
-                  className={`group relative flex items-center justify-center px-8 py-3 sm:px-9 sm:py-3.5 rounded-full bg-white/95 backdrop-blur-xl border border-blue-500/30 transition-all duration-300 cursor-pointer shadow-[0_0_35px_-5px_rgba(37,99,235,0.35),0_10px_25px_-5px_rgba(15,23,42,0.08)] ${
+                  className={`group relative flex items-center justify-center px-6 py-2.5 sm:px-8 sm:py-3 rounded-full bg-white/95 backdrop-blur-xl border border-blue-500/30 transition-all duration-300 cursor-pointer shadow-[0_0_35px_-5px_rgba(37,99,235,0.35),0_10px_25px_-5px_rgba(15,23,42,0.08)] ${
                     hubHovered ? "scale-105 shadow-[0_0_55px_0_rgba(37,99,235,0.5)] border-blue-500" : ""
                   }`}
                 >
-                  <span className="text-base sm:text-lg md:text-xl font-serif font-light text-slate-900 tracking-tight">
-                    Commercia<span className="text-blue-600 font-normal">X</span>
-                  </span>
+                  <Image
+                    src="/logo.png"
+                    alt="COMMERCIAX"
+                    width={249}
+                    height={30}
+                    priority
+                    className="h-4 sm:h-5 md:h-5.5 w-auto object-contain select-none"
+                  />
                 </div>
 
                 {/* Right Contextual Label */}
