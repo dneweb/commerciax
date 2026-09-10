@@ -36,12 +36,6 @@ export function CTASection() {
 
           {/* Centered Content */}
           <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center justify-center px-6 py-14 sm:py-18 md:py-20 text-center">
-            {/* Eyebrow badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50/90 border border-blue-200/80 text-blue-700 text-xs font-sans font-medium tracking-wide mb-6">
-              <span aria-hidden="true" className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-              <span>Ready to Ship</span>
-            </div>
-
             {/* Headline */}
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-serif font-light tracking-tight leading-[1.08] text-slate-950 mb-5 sm:mb-6 max-w-3xl">
               Have something <br className="hidden sm:inline" />
