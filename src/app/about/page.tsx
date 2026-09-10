@@ -172,10 +172,17 @@ export default function AboutPage() {
         className="relative w-full pt-12 pb-20 sm:pt-16 sm:pb-24 md:pt-20 md:pb-28 px-6 md:px-12 lg:px-16 max-w-7xl mx-auto"
       >
         <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20">
-          {/* Section Indicator */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/[0.04] border border-slate-200/80 text-slate-700 text-xs font-mono mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse" />
-            <span>Our Story · CommerciaX Infotech</span>
+          {/* Authentic Editorial Folio */}
+          <div className="flex items-center justify-center gap-3.5 mb-8 select-none">
+            <span className="h-px w-8 bg-slate-300/80" />
+            <span className="text-[11px] sm:text-xs font-mono uppercase tracking-[0.24em] text-slate-500 font-medium">
+              Our Story
+            </span>
+            <span className="text-slate-300">/</span>
+            <span className="text-[11px] sm:text-xs font-mono uppercase tracking-[0.24em] text-slate-400">
+              CommerciaX Infotech
+            </span>
+            <span className="h-px w-8 bg-slate-300/80" />
           </div>
 
           {/* Main Headline */}
@@ -499,9 +506,13 @@ export default function AboutPage() {
             className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_70%_60%_at_50%_0%,rgba(37,99,235,0.08)_0%,transparent_100%)]"
           />
 
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/60 text-blue-700 text-xs font-mono mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse" />
-            <span>Still Day One</span>
+          {/* Authentic Editorial Overline */}
+          <div className="flex items-center justify-center gap-3 mb-6 select-none">
+            <span className="h-px w-8 bg-slate-200" />
+            <span className="text-[11px] sm:text-xs font-mono uppercase tracking-[0.22em] text-blue-600 font-medium">
+              Still Day One
+            </span>
+            <span className="h-px w-8 bg-slate-200" />
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-light tracking-tight leading-[1.08] text-slate-950 mb-6">
